@@ -1,0 +1,86 @@
+#!/bin/bash
+
+#colours
+blue='\033[1;34m'
+grn='\033[1;32m'
+
+if [[ "$1" == "-s" ]];
+then
+neofetch | lolcat
+else
+# Gathering infomation
+# OS
+OS=$(awk -F'=' '/PRETTY_NAME/ {print $2; exit}' "/etc/os-release")
+echo -e "$blue""Operating system: ""${grn}""${OS}"
+
+# Kernal-name
+KER_NAME=$(uname -s)
+echo -e "$blue""Kernal name: ""${grn}""${KER_NAME}"
+
+# Kernal-version
+KER_VER=$(uname -r)
+echo -e "$blue""Kernal version: ""${grn}""${KER_VER}"
+
+# Kernal-release
+KER_REL=$(uname -v)
+echo -e "$blue""Kernal release: ""${grn}""${KER_REL}"
+
+# Machine name
+MACHI_NAME=$(awk -F':' '/Model/ {print $2; exit}' "/proc/cpuinfo")
+echo  -e "$blue""Machine name: ""${grn}""${MACHI_NAME}"
+
+# Processor
+PROCESSOR=$(awk -F':' '/Hardware/ {print $2; exit}' "/proc/cpuinfo")
+echo -e "$blue""Processor: ""${grn}""${PROCESSOR}"
+
+# Hostname
+HOSTNAME=$(uname -n)
+echo -e "$blue""Hostname: ""${grn}""${HOSTNAME}"
+
+# User
+USER=$(whoami)
+echo -e "$blue""User: ""${grn}""${USER}"
+
+# ID
+ID=$(id)
+echo -e "$blue""ID: ""${grn}""${ID}"
+
+# Total storage
+TOTAL_STO=$(df -h / | awk '{ print $2 }' | tail -1)
+echo -e "$blue""Total storage: ""${grn}""${TOTAL_STO}"
+
+# Used storage
+USED_STO=$(df -h / | awk '{ print $3 }' | tail -1)
+USED_STO_PER=$(df -h / | awk '{ print $5 }' | tail -1)
+echo -e "$blue""Used storage: ""${grn}""${USED_STO}" "${USED_STO_PER}"
+
+# Available storage
+AVAIL_STO=$(df -h / | awk '{ print $4 }' | tail -1)
+echo -e "$blue""Available storage: ""${grn}""${AVAIL_STO}"
+
+# USB Total storage
+TOTAL_USB_STO=$(df -h /dev/sda* | awk '{ print $2 }' | tail -1)
+echo -e "$blue""Total USB storage: ""${grn}""${TOTAL_USB_STO}"
+
+# USB Used storage
+USED_USB_STO=$(df -h /dev/sda* | awk '{ print $3 }' | tail -1)
+USED_USB_STO_PER=$(df -h /dev/sda* | awk '{ print $5 }' | tail -1)
+echo -e "$blue""Used USB storage: ""${grn}""${USED_USB_STO}" "${USED_USB_STO_PER}"
+
+# USB Available storage
+AVAIL_USB_STO=$(df -h /dev/sda* | awk '{ print $4 }' | tail -1)
+echo -e "$blue""Available USB storage: ""${grn}""${AVAIL_USB_STO}"
+
+# Wlan0 IP
+WLAN0=$(ifconfig wlan0 | grep -w inet | awk '{printf $2}' | tail -1)
+echo -e "$blue""Wlan0 IP: ""${grn}""${WLAN0}"
+
+#Eth0 IP
+#ETH0=$(ifconfig eth0 | grep -w inet | awk '{printf $2}' | tail -1)
+#echo -e "$blue""Eth0 IP: ""${grn}""${ETH0}"
+
+# Temprature
+TEMP=$(cat /sys/class/thermal/thermal_zone0/temp)
+echo  -e "$blue""CPU Temprature: ""${grn}""${TEMP}"
+
+fi
