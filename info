@@ -187,7 +187,7 @@ then
 
 elif [[ "$1" == "-a" ]];
 then
-	neofetch | lolcat
+	#neofetch | lolcat
 	# OS
 	echo -e "$blue""Operating system: ""${grn}""${OS}"
 
@@ -225,13 +225,13 @@ then
 	echo -e "$blue""Available storage: ""${grn}""${AVAIL_STO}"
 
 	# USB Total storage
-	echo -e "$blue""Total USB storage: ""${grn}""${TOTAL_USB_STO}"
+	#echo -e "$blue""Total USB storage: ""${grn}""${TOTAL_USB_STO}"
 
 	# USB Used storage
-	echo -e "$blue""Used USB storage: ""${grn}""${USED_USB_STO}" "${USED_USB_STO_PER}"
+	#echo -e "$blue""Used USB storage: ""${grn}""${USED_USB_STO}" "${USED_USB_STO_PER}"
 
 	# USB Available storage
-	echo -e "$blue""Available USB storage: ""${grn}""${AVAIL_USB_STO}"
+	#echo -e "$blue""Available USB storage: ""${grn}""${AVAIL_USB_STO}"
 
 	# Wlan0 IP
 	echo -e "$blue""Wlan0 IP: ""${grn}""${WLAN0}"

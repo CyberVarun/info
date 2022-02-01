@@ -1,10 +1,10 @@
-## Summary
+### Summary
 This is information gathering tool for local system. It works on both Debian/Arch based linux distros. It will gather all information like kernel version, ID, CPU temprature, IP, connected storage devices and more of your system in just single click.
 <hr></hr>
 
-## Requriments
+### Requriments
 
-` apt install lolcat `
+` apt install lolcat neofetch `
 
 or you can use pip3 to install lolcat
 
@@ -12,18 +12,17 @@ or you can use pip3 to install lolcat
 
 <hr></hr>
 
-## Installation
+### Installation
 
 ` git clone https://github.com/CyberVarun/info.git `
 
 ` cd info `
 
-make sure that you have root/sudo privileges while installing. 
+make sure that you have **root/sudo** privileges while installing. 
 
 ` ./install.sh `
 
-## Usage
-
+### Usage
 `$ info -h`
 
 `Info v0.0`
@@ -71,3 +70,16 @@ make sure that you have root/sudo privileges while installing.
 `-tp     Temprature`
 
 `-a      All at once` 
+
+If get an **error** just **comment** the line in code. If still error arrive message me.
+
+### Tested on
+
+kali Linux
+
+Ubuntu
+
+Manjaro
+
+### Preview
+![preview image](./assests/preview_800x586.png)

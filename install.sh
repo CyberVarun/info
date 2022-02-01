@@ -4,6 +4,7 @@ if [[ $? != 0 ]];
 then
 	echo "This must be run with root/sudo privileges"
 	echo "Try again"
+	exit
 fi
 
 if [[ $1 == "--uninstall" ]];
