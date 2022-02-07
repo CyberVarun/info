@@ -3,25 +3,23 @@ This is information gathering tool for local system. It works on both Debian/Arc
 <hr></hr>
 
 ## Requriments
-'''
-apt install lolcat neofetch
-'''
+` apt install lolcat neofetch `
+
 or you can use pip3 to install lolcat
-'''
-pip3 install lolcat
-'''
+` pip3 install lolcat `
+
 <hr></hr>
 
 ## Installation
-'''
+```
 git clone https://github.com/CyberVarun/info.git
 cd info
 #make sure that you have **root/sudo** privileges while installing. 
 ./install.sh
-'''
+```
 <hr>
 ## Usage
-'''
+```
 $ info -h
 Info v0.0
 Usage: info -options
@@ -47,7 +45,7 @@ Options:
 -ei     Ethernet IP (By default disabled)
 -tp     Temprature
 -a      All at once
-'''
+```
 
 If get an **error** just **comment** the line in code. If still error arrive message me.
 
