@@ -45,6 +45,7 @@ Options:
 -ei     Ethernet IP (By default disabled)
 -tp     Temprature
 -a      All at once
+
 ```
 
 If get an **error** just **comment** the line in code. If still error arrive message me.
