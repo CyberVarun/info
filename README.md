@@ -22,7 +22,7 @@ cd info
 ## Usage
 
 ```
-info -h
+$ info -h
 Info v0.0
 Usage: info -options
 
