@@ -23,7 +23,8 @@ cd info
 info -h
 Info v0.0
 Usage: info -options
-
+```
+```
 Options:
 -neo    neofetch
 -os     Operating
