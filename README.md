@@ -11,10 +11,12 @@ or you can use pip3 to install lolcat
 <hr></hr>
 
 ## Installation
+
+make sure that you have **root/sudo** privileges while installing. 
+
 ```
 git clone https://github.com/CyberVarun/info.git
 cd info
-#make sure that you have **root/sudo** privileges while installing. 
 ./install.sh
 ```
 <hr>
@@ -40,9 +42,6 @@ Options:
 -is     Internal storage
 -ius    Internal used storage
 -ias    Internal available storage
--es     External storage
--eus    External used storage
--eas    External available storage
 -wi     Wlan0 IP
 -ei     Ethernet IP (By default disabled)
 -tp     Temprature
