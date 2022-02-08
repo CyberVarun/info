@@ -46,14 +46,14 @@ USED_STO_PER=$(df -h / | awk '{ print $5 }' | tail -1)
 AVAIL_STO=$(df -h / | awk '{ print $4 }' | tail -1)
 
 # USB Total storage
-TOTAL_USB_STO=$(df -h /dev/sda* | awk '{ print $2 }' | tail -1)
+# TOTAL_USB_STO=$(df -h /dev/sda* | awk '{ print $2 }' | tail -1)
 
 # USB Used storage
-USED_USB_STO=$(df -h /dev/sda* | awk '{ print $3 }' | tail -1)
-USED_USB_STO_PER=$(df -h /dev/sda* | awk '{ print $5 }' | tail -1)
+# USED_USB_STO=$(df -h /dev/sda* | awk '{ print $3 }' | tail -1)
+# USED_USB_STO_PER=$(df -h /dev/sda* | awk '{ print $5 }' | tail -1)
 
 # USB Available storage
-AVAIL_USB_STO=$(df -h /dev/sda* | awk '{ print $4 }' | tail -1)
+# AVAIL_USB_STO=$(df -h /dev/sda* | awk '{ print $4 }' | tail -1)
 
 # Wlan0 IP
 WLAN0=$(ifconfig wlan0 | grep -w inet | awk '{printf $2}' | tail -1)
@@ -82,9 +82,9 @@ then
 	echo -e "$grn""-is	${blue}Internal storage"
 	echo -e "$grn""-ius	${blue}Internal used storage"
 	echo -e "$grn""-ias	${blue}Internal available storage"
-	echo -e "$grn""-es	${blue}External storage"
-	echo -e "$grn""-eus	${blue}External used storage"
-	echo -e "$grn""-eas    ${blue}External available storage"
+	# echo -e "$grn""-es	${blue}External storage"
+	# echo -e "$grn""-eus	${blue}External used storage"
+	# echo -e "$grn""-eas    ${blue}External available storage"
 	echo -e "$grn""-wi	${blue}Wlan0 IP"
 	echo -e "$grn""-ei	${blue}Ethernet IP (By default disabled)"
 	echo -e "$grn""-tp	${blue}Temprature"
@@ -155,20 +155,20 @@ then
 	echo -e "$blue""Available storage: ""${grn}""${AVAIL_STO}"
 	exit
 
-elif [[ "$1" == "-es" ]];
-then	
-	echo -e "$blue""Total USB storage: ""${grn}""${TOTAL_USB_STO}"
-	exit
+# elif [[ "$1" == "-es" ]];
+# then	
+# 	echo -e "$blue""Total USB storage: ""${grn}""${TOTAL_USB_STO}"
+# 	exit
 
-elif [[ "$1" == "-eus" ]];
-then	
-	echo -e "$blue""Used USB storage: ""${grn}""${USED_USB_STO}" "${USED_USB_STO_PER}"
-	exit
+# elif [[ "$1" == "-eus" ]];
+# then	
+# 	echo -e "$blue""Used USB storage: ""${grn}""${USED_USB_STO}" "${USED_USB_STO_PER}"
+# 	exit
 
-elif [[ "$1" == "-eas" ]];
-then	
-	echo -e "$blue""Available USB storage: ""${grn}""${AVAIL_USB_STO}"
-	exit
+# elif [[ "$1" == "-eas" ]];
+# then	
+# 	echo -e "$blue""Available USB storage: ""${grn}""${AVAIL_USB_STO}"
+# 	exit
 
 elif [[ "$1" == "-wi" ]];
 then	
@@ -177,8 +177,8 @@ then
 
 #elif [[ "$1" == "-ei" ]];
 #then	
-	#echo -e "$blue""Eth0 IP: ""${grn}""${ETH0}"
-	exit
+#	echo -e "$blue""Eth0 IP: ""${grn}""${ETH0}"
+#	exit
 
 elif [[ "$1" == "-tp" ]];
 then	
